@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-boas-vindas
+  namespace: boas-vindas
 spec:
   replicas: 2
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app-boas-vindas
-        image: app-boas-vindas
+        image: marcosborba01/devops:2.0
         ports:
           - containerPort: 80
         imagePullPolicy: Always
